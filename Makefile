@@ -11,4 +11,4 @@ today:
 	@./activate_env.sh
 
 finish:
-	./finish_day.sh $(message)
+	./finish_day.sh -m "$(message)"
