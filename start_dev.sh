@@ -12,7 +12,7 @@ source $TODAYVAl/.venv/bin/activate
 cp -R $BACKUPDIR/first_app $TODAYVAl/first_app 
 cp $BACKUPDIR/requirements.txt $TODAYVAl/requirements.txt
 echo "Installing pip requirements"
-./install_current.sh ./$TODAYVAl
+pip install -r ./$TODAYVAl/requirements.txt
 touch $TODAYVAl/content.md
 rm -rf $BACKUPDIR/.venv
 echo "Cleaning up yesterdays virtual environment"
