@@ -9,5 +9,5 @@ done
 
 TODAYVAl=$(date +"%d_%m")
 git add .
-git commit -m "Finished [$TODAYVAl]: $parameterA"
+git commit -m "[$TODAYVAl]: $parameterA"
 git push origin $(git rev-parse --abbrev-ref HEAD)
