@@ -37,7 +37,11 @@ def get_koder(request, id):
     if isinstance(founded_koder, dict):
         return render(request, "koders.html", context={"koders": [founded_koder]})
     else:
-        return HttpResponse("Koder not found")
+        return render(
+            request,
+            "error.html",
+            context={"message": "Koder not found, please retry with a new id"},
+        )
 
 
 def list_koders(req):
