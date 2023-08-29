@@ -4,30 +4,12 @@ from django.template import loader
 
 
 KODERS = [
-    {
-        "id": 0,
-        "name": "Juan",
-    },
-    {
-        "id": 1,
-        "name": "Pedro",
-    },
-    {
-        "id": 2,
-        "name": "José",
-    },
-    {
-        "id": 3,
-        "name": "Cristian",
-    },
-    {
-        "id": 4,
-        "name": "John Doe",
-    },
-    {
-        "id": 4,
-        "name": "Johane Doe",
-    },
+    {"id": 0, "name": "Juan", "is_active": True},
+    {"id": 1, "name": "Pedro", "is_active": False},
+    {"id": 2, "name": "José", "is_active": True},
+    {"id": 3, "name": "Cristian", "is_active": False},
+    {"id": 4, "name": "John Doe", "is_active": True},
+    {"id": 4, "name": "Johane Doe", "is_active": False},
 ]
 
 
