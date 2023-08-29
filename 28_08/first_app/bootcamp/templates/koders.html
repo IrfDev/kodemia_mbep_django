@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block normal_content %}
+
+<dl class="text-white text-lg font-mono">
+  {% for koder in koders %}
+
+  <dd class="ml-2 text-sm">name: {{koder.name}}</dd>
+  <dd class="ml-2 text-sm mb-3">id: {{koder.id}}</dd>
+  {% endfor %}
+</dl>
+{% endblock %}
