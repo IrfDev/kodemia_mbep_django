@@ -1,0 +1,10 @@
+{% load static tailwind_tags %}
+
+<head>
+  {% tailwind_css %}
+</head>
+
+<main class="bg-black h-screen w-screen p-10">
+  <h1 class="text-3xl text-white">Welcome to kodemia</h1>
+  {% block normal_content %}{% endblock %}
+</main>

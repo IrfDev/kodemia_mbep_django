@@ -7,7 +7,7 @@ do
    esac
 done
 
-TODAYVAl=$(date +"%d_%m")
+TODAYVAl=$1
 git add .
 git commit -m "[$TODAYVAl]: $parameterA"
 git push origin $(git rev-parse --abbrev-ref HEAD)

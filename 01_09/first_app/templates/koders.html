@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block normal_content %}
+
+<dl class="text-white text-lg font-mono">
+  {% for koder in koders %}
+
+  <dd
+    class="ml-2 text-sm {% if koder.status == "active" %} text-green-500 {% else %} text-red-500 {% endif %}"
+  >
+    name: {{koder.first_name}} {{koder.last_name}} 
+  </dd>
+
+  <dd
+    class="ml-2 text-sm mb-3 {% if koder.status == "active" %} text-green-500 {% else %} text-red-500 {% endif %}"
+  >
+    id: {{koder.id}}
+  </dd>
+  {% endfor %}
+</dl>
+
+{% endblock %}
