@@ -41,3 +41,28 @@ urlpatterns = [
 ]
 ````
 
+# [Models](https://docs.djangoproject.com/en/4.2/topics/db/models/)
+
+Models are the DB classes we define.
+
+These Models, are based on an ORM where you can create each class with an specific syntax. No matter which DB system you're using
+
+
+
+
+You can import them directly from models, or if you saved it in another app, you can import it with `YOUR_APP.YOUR_MODEL`.
+
+
+Remember that each Model is a class with some predefined methods.
+
+Some notes:
+- The objects key includes a set of functions to interact with the DB
+- When you're creating a new instance on the database you need to call the `.save()` method in your Model class to persist the change
+- Inheritance and all the class features are available as each Model is a regular Python Class
+
+## [Field types](https://docs.djangoproject.com/en/4.2/topics/db/models/#field-types):
+
+You can import them from `models.DEFINED_TYPE` where you can find different pre-defined types that you can use. 
+
+Please noticed that each field type is a function that take some required arguments.
+

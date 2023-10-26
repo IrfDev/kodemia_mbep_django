@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Starting your new day!!!"
-TODAYVAl=$(date +"%d_%m")
+TODAYVAl=$1
 BACKUPDIR=$(ls -td ./*/ | head -1)
 echo $BACKUPDIR
 echo "Your base app will be $BACKUPDIR"

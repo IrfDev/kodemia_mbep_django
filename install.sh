@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TODAYVAl=$(date +"%d_%m")
-echo "Installing $1 package in todays directory $($TODAYVAl)"
+TODAYVAl=$1
+echo "Installing $2 package in todays directory $($TODAYVAl)"
 source $TODAYVAl/.venv/bin/activate
 cd $TODAYVAl
-pip install $1
+pip install $2
 pip freeze > requirements.txt
