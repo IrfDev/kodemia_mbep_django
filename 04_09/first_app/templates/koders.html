@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block normal_content %}
+
+{% if mentor %}
+<h3 class="block my-2 text-indigo-500 text-lg">Hello {{mentor.first_name}} {{ mentor.last_name}}!</h3>
+
+<span class="text-indigo-500 font-semibold">
+  Here are your koders:
+</span>
+{% endif %}
+
+<dl class="text-white text-lg font-mono my-5">
+  {% for koder in koders %}
+
+  <dd
+    class="ml-2 text-sm {% if koder.status == "active" %} text-green-500 {% else %} text-red-500 {% endif %}"
+  >
+    name: {{koder.first_name}} {{koder.last_name}} 
+  </dd>
+
+  <dd
+    class="ml-2 text-sm mb-3 {% if koder.status == "active" %} text-green-500 {% else %} text-red-500 {% endif %}"
+  >
+    id: {{koder.id}}
+  </dd>
+  {% endfor %}
+</dl>
+
+{% endblock %}

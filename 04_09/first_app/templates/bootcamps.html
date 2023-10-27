@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block normal_content %}
+
+<h2 class="text-gray-300 text-xl">
+  Bootcamps by koders whose last name ends with 'ez'
+</h2>
+
+{% if are_unique %}
+<strong class="block my-2 text-indigo-500 text-xs">Unique values</strong>
+{% endif %}
+
+<dl class="text-white text-lg font-mono">
+  {% for bootcamp in bootcamps %}
+
+  <dd class="ml-2 text-sm text-white">name: {{bootcamp.name}}</dd>
+
+  <dd class="ml-2 text-sm mb-3 text-white">id: {{bootcamp.id}}</dd>
+  {% endfor %}
+</dl>
+
+{% endblock %}
