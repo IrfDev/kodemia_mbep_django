@@ -35,3 +35,4 @@ EG: Class A. Class B. Row B.b=A.a If the related_name is 'bs'. Then you can call
 
 
 # Tweaking the terminal with iPython
+
