@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block normal_content %}
+
+<h2 class="text-gray-300 text-xl">Psychologists</h2>
+
+{% if are_unique %}
+<strong class="block my-2 text-indigo-500 text-xs">Unique values</strong>
+{% endif %}
+
+<dl class="text-white text-lg font-mono">
+  {% for psychologist in psychologists %}
+
+  <dd class="ml-2 text-sm text-white">name: {{psychologist.first_name}}</dd>
+
+  <dd class="ml-2 text-sm mb-3 text-white">id: {{psychologist.id}}</dd>
+  {% endfor %}
+</dl>
+
+{% endblock %}

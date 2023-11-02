@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block normal_content %}
+
+<h2 class="text-gray-300 text-xl">appointments</h2>
+
+{% if are_unique %}
+<strong class="block my-2 text-indigo-500 text-xs">Unique values</strong>
+{% endif %}
+
+<dl class="text-white text-lg font-mono">
+  {% for appointment in appointments %}
+
+  <dd class="ml-2 text-sm text-white">name: {{appointment.title}}</dd>
+  <dd class="ml-2 text-sm text-white">
+    Patient: {{appointment.patient_id__first_name}}
+  </dd>
+  <dd class="ml-2 text-sm text-white">
+    Pscyhologist: {{appointment.psychologist_id__first_name}}
+  </dd>
+
+  <dd class="ml-2 text-sm mb-3 text-white">id: {{appointment.id}}</dd>
+  {% endfor %}
+</dl>
+
+{% endblock %}
